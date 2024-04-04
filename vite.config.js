@@ -14,4 +14,7 @@ export default defineConfig({
     outDir: '../dist',
   },
   plugins: [injectHTML(), FullReload(['./src/**/**.html'])],
+  optimizeDeps: {
+    exclude: ['js-big-decimal'],
+  },
 });
