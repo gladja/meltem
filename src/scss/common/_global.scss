@@ -1,0 +1,17 @@
+@import '../utilities/variables';
+
+.container {
+  max-width: $mobile;
+  margin: 0 auto;
+  padding: 0 15px;
+
+  @media screen and (min-width: $tablet) {
+    max-width: $tablet;
+    padding: 0 30px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    max-width: $desktop;
+    padding: 0 60px;
+  }
+}
