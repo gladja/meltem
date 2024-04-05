@@ -13,6 +13,7 @@ const closeFormBtn = document.querySelector('.js-close-form');
 
 const formValue = document.querySelector('.contactForm');
 const formHide = document.querySelector('.form__wrap');
+const formCloseHide = document.querySelector('.form__btn');
 const formSuccess = document.querySelector('.form__success');
 
 ruBtn.addEventListener('click', () => {
@@ -61,6 +62,7 @@ closeFormBtn.addEventListener('click', () => {
 formValue.addEventListener('submit', e => {
   e.preventDefault();
   formHide.classList.add('send');
+  formCloseHide.classList.add('send');
   formSuccess.classList.remove('send');
 
   setTimeout(() => {
@@ -72,5 +74,6 @@ formValue.addEventListener('submit', e => {
   setTimeout(() => {
     formValue.reset();
     formHide.classList.remove('send');
+    formCloseHide.classList.remove('send');
   }, 2000);
 });
