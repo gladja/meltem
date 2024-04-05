@@ -1,5 +1,7 @@
 @import 'node_modules/modern-normalize/modern-normalize';
 @import './scss/common/reset';
 @import './scss/common/global';
-@import './scss/partials/header';
+@import './scss/partials/header/header';
+@import './scss/partials/header/burger';
+@import './scss/partials/header/form';
 @import './scss/partials/hero';

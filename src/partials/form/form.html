@@ -1,0 +1,58 @@
+<div class="js-form-container">
+    <button class="js-close-form form__btn">
+      <svg class="">
+        <use href="./images/sprite.svg#close"></use>
+      </svg>
+    </button>
+    <div class="form__wrap ">
+      <h3 class="form__title">Залишайте заявку</h3>
+      <p class="form__text">Ми зв’яжемося з вами найближчим часом.</p>
+      <form id="contactForm" class="contactForm">
+        <div>
+          <input
+            class="form__input"
+            type="text"
+            name="name"
+            required
+            placeholder="Ваше ім’я*"
+          />
+        </div>
+        <div class="form__input-wrap">
+          <input
+            id="phone"
+            class="form__input tel"
+            type="tel"
+            pattern="[+0-9]{6}-[0-9]{3}-[0-9]{4}"
+            name="phone"
+            required
+            placeholder="+38000-000-0000*"
+          />
+          <img
+            class="form__img"
+            src="../images/ukr.jpeg"
+            alt="ukraine"
+            width="20"
+            height="15"
+          />
+        </div>
+        <button class="btn large " data-btn type="submit">Відправить</button>
+      </form>
+      <p class="form__info">
+        Натискаючи кнопку “Надіслати”, ви погоджуєтесь з
+        </p>
+        <p class="form__info underline">
+          <a href="">Правилами обробки персональних даних.</a>
+        </p>
+      </p>
+    </div>
+  
+    <div class="form__success send">
+        <svg class="form__ok">
+          <use href="./images/sprite.svg#ok"></use>
+        </svg>
+  
+      <h3 class="form__title">Дякуємо 
+        за заявку!</h3>
+        <p class="form__text">Ваші дані успішно надіслані!</p>
+    </div>
+  </div>
