@@ -1,3 +1,5 @@
+@import '../../components/buttons';
+
 .js-form-container {
   position: absolute;
   padding: 15px;
@@ -9,6 +11,7 @@
   border-radius: 5px;
   transform: translateY(-120%);
   transition-duration: 1s;
+  z-index: 99;
 
   //   border: 1px solid $gray;
 
@@ -143,18 +146,13 @@
   }
 }
 
+.btn__revert {
+  @include btn-main($white, $gray);
+}
+
 .large {
-  background: $gray;
-  color: $white;
   width: 100%;
   margin-bottom: 10px;
-
-  transition: all $dur-primary;
-
-  &:hover {
-    background: $white;
-    color: $gray;
-  }
 
   @media screen and (min-width: $tablet) {
     margin-bottom: 15px;

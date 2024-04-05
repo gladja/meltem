@@ -4,7 +4,7 @@ const uaBtnMob = document.querySelector('[data-ua-mob]');
 const ruBtnMob = document.querySelector('[data-ru-mob]');
 
 const overlayForm = document.querySelector('[data-overlay]');
-// const mobileMenu = document.querySelector('.modal__btn');
+const overlayHero = document.querySelector('.hero__wrap');
 const mobileMenu = document.querySelector('.js-menu-container');
 const form = document.querySelector('.js-form-container');
 const openMenuBtn = document.querySelector('.js-open-menu');
@@ -43,6 +43,7 @@ window.matchMedia('(min-width: 768px)').addEventListener('change', e => {
 openMenuBtn.addEventListener('click', () => {
   form.classList.remove('is__open');
   overlayForm.classList.remove('backdrop');
+  overlayHero.classList.remove('backdrop');
   mobileMenu.classList.toggle('is__open');
 });
 
@@ -51,12 +52,14 @@ openFormBtn.addEventListener('click', () => {
   form.classList.toggle('is__open');
 
   overlayForm.classList.toggle('backdrop');
+  overlayHero.classList.toggle('backdrop');
 });
 
 closeFormBtn.addEventListener('click', () => {
   form.classList.remove('is__open');
   document.body.classList.remove('backdrop');
   overlayForm.classList.remove('backdrop');
+  overlayHero.classList.remove('backdrop');
 });
 
 formValue.addEventListener('submit', e => {
@@ -69,6 +72,7 @@ formValue.addEventListener('submit', e => {
     form.classList.remove('is__open');
     formSuccess.classList.add('send');
     overlayForm.classList.toggle('backdrop');
+    overlayHero.classList.toggle('backdrop');
   }, 1000);
 
   setTimeout(() => {
