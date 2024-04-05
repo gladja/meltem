@@ -1,5 +1,4 @@
 .hero {
-  //   height: 545px;
   background: linear-gradient(
     0deg,
     rgba(212, 227, 236, 0.3) 0%,
@@ -26,7 +25,6 @@
 .hero__block {
   width: 170px;
   text-align: start;
-  //   margin: 0 auto;
 
   @media screen and (min-width: $tablet) {
     width: 320px;
@@ -42,7 +40,6 @@
 
   @media screen and (min-width: $tablet) {
     font-size: 50px;
-    // margin-top: 148px;
     margin-bottom: 30px;
   }
 
@@ -78,7 +75,6 @@
 .hero__model {
   width: 170px;
   margin-top: 20px;
-  //   margin: 20px auto 0;
   margin-left: auto;
   text-align: start;
 
