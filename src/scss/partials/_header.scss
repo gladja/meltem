@@ -1,13 +1,173 @@
-.nav {
+@import '../components/buttons';
+@import '../common/variables';
+
+.header {
+  margin-top: 15px;
   display: flex;
-  margin-top: 30px;
+  align-items: center;
+  justify-content: space-between;
+  height: 30px;
+
+  @media screen and (min-width: $tablet) {
+    gap: 10px;
+    margin-top: 30px;
+    margin-bottom: 55px;
+    flex-wrap: wrap;
+    height: 45px;
+
+    & :nth-child(2) {
+      order: 3;
+    }
+    & :nth-child(3) {
+      order: 2;
+    }
+  }
+
+  @media screen and (min-width: $desktop) {
+    gap: 0;
+    margin-bottom: 0;
+    & :nth-child(2) {
+      order: 2;
+    }
+    & :nth-child(3) {
+      order: 3;
+    }
+  }
+}
+
+.nav {
+  display: none;
+
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    height: 45px;
+    // width: 100%;
+  }
+
+  @media screen and (min-width: $desktop) {
+    // width: auto;
+  }
 }
 
 .nav__img {
-  height: 30px;
+  height: 18px;
+
+  @media screen and (min-width: $tablet) {
+    height: 30px;
+  }
 }
 
 .nav__menu {
   display: flex;
-  gap: 40px;
+
+  .item {
+    padding: 5px 0;
+    border: 1px solid $white;
+    transition: all $dur-primary;
+  }
+
+  .item:hover {
+    border-bottom: 1px solid $black;
+  }
+
+  .item a {
+    color: $black;
+  }
+
+  @media screen and (min-width: $tablet) {
+    font-size: 20px;
+    gap: 40px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    font-size: 16px;
+  }
+}
+
+.adr {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+
+  @media screen and (min-width: $tablet) {
+    gap: 0;
+
+    & :nth-child(2) {
+      order: 2;
+    }
+    & :nth-child(3) {
+      order: 3;
+    }
+  }
+}
+
+.adr__menu {
+  display: flex;
+
+  .item {
+    &:first-child,
+    &:last-child {
+      display: none;
+    }
+  }
+
+  @media screen and (min-width: $tablet) {
+    .item {
+      display: flex;
+
+      a {
+        color: $black;
+        font-style: normal;
+        font-weight: 600;
+        letter-spacing: 0.01em;
+      }
+
+      &:first-child,
+      &:last-child {
+        display: flex;
+      }
+    }
+
+    display: flex;
+    align-items: center;
+    gap: 40px;
+  }
+}
+
+.btn {
+  @include btn-main($gray, $white);
+
+  @media screen and (min-width: $tablet) {
+    @include btn-main($white, $gray);
+  }
+}
+
+.btn__lang {
+  @include btn-lang;
+}
+
+.active {
+  color: $white;
+  background: $gray;
+  border: 1px solid $gray;
+}
+
+.modal__btn {
+  display: block;
+  background: $white;
+  border: 0;
+  cursor: pointer;
+  padding: 0;
+  width: 40px;
+
+  @media screen and (min-width: $tablet) {
+    display: none;
+  }
+
+  .hb {
+    margin: 0 auto;
+    display: block;
+  }
 }

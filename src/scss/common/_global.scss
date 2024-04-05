@@ -1,7 +1,12 @@
-@import '../utilities/variables';
+@import '../common/variables';
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
 
 .container {
-  max-width: $mobile;
+  min-width: $mobile;
+  max-width: $mobile-max;
   margin: 0 auto;
   padding: 0 15px;
 
@@ -14,4 +19,9 @@
     max-width: $desktop;
     padding: 0 60px;
   }
+}
+
+.section {
+  padding-top: 20px;
+  padding-bottom: 20px;
 }

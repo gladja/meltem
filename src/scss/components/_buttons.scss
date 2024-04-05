@@ -1,0 +1,50 @@
+@import '../common/variables';
+
+@mixin btn-main($color: $white, $bg: $gray) {
+  font-size: 12px;
+  font-weight: 500;
+  text-align: center;
+  padding: 8px 19px;
+  color: $color;
+  background: $bg;
+  border: 1px solid $gray;
+  border-radius: 4px;
+
+  transition: all $dur-primary;
+
+  &:hover,
+  &:focus {
+    background: $color;
+    color: $bg;
+  }
+
+  @media screen and (min-width: $tablet) {
+    font-size: 16px;
+    padding: 13px 29px;
+    border-radius: 5px;
+  }
+}
+
+@mixin btn-lang {
+  font-size: 10px;
+  font-weight: 700;
+  text-align: center;
+  padding: 7px 6px;
+  color: $gray;
+  background: $white;
+  border: 1px solid $white;
+  border-radius: 4px;
+
+  transition: all $dur-primary;
+
+  &:hover,
+  &:focus {
+    border: 1px solid $gray;
+  }
+
+  @media screen and (min-width: $tablet) {
+    font-size: 12px;
+    padding: 8px 7px;
+    border-radius: 5px;
+  }
+}
